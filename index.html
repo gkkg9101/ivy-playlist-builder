@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d0f0e">
+<title>Ivy Playlist Builder</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main>
+<header>
+  <div class="kicker">IVY PLAYLIST BUILDER</div>
+  <h1>100曲を、そのままSpotifyへ。</h1>
+  <p>外部の移行サービスは使わず、Spotify公式APIで照合・確認・作成します。</p>
+</header>
+
+<section class="card">
+  <h2>1. Spotify接続</h2>
+  <p class="note">Spotify DashboardのRedirect URIには、次を完全一致で登録してください。</p>
+  <div class="copyline"><code id="redirectUri"></code><button id="copyRedirect" class="smallbtn">コピー</button></div>
+  <label>Client ID
+    <input id="clientId" autocomplete="off" placeholder="Spotify Client ID">
+  </label>
+  <button id="loginBtn">Spotifyにログイン</button>
+  <p id="loginStatus" class="status">未接続</p>
+</section>
+
+<section class="card">
+  <div class="sectionhead"><h2>2. 曲目</h2><span id="trackCount"></span></div>
+  <p class="note">「アーティスト - 曲名」の形式。ここで追加・削除・並べ替えできます。</p>
+  <textarea id="trackEditor" spellcheck="false"></textarea>
+  <div class="actions"><button id="applyBtn" class="secondary">変更を反映</button><button id="resetBtn" class="ghost">100曲に戻す</button></div>
+</section>
+
+<section class="card">
+  <div class="sectionhead"><h2>3. Spotifyで照合</h2><span id="summary">未検索</span></div>
+  <p class="note">確信度が低い曲は「要確認」。候補を選び直せます。</p>
+  <button id="matchBtn" disabled>曲を検索する</button>
+  <div id="results"></div>
+</section>
+
+<section class="card">
+  <h2>4. プレイリスト作成</h2>
+  <label>プレイリスト名<input id="playlistName" value="Ivy 100 — A Music Tree"></label>
+  <label>説明<input id="playlistDescription" value="100 tracks connected by sound, structure and lineage."></label>
+  <label class="check"><input type="checkbox" id="isPublic"> 公開プレイリストにする</label>
+  <button id="createBtn" disabled>Spotifyに作成</button>
+  <div id="done"></div>
+</section>
+</main>
+<script src="./app.js"></script>
+</body>
+</html>
