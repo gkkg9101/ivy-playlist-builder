@@ -1,24 +1,26 @@
-const DEFAULT_TRACKS = [["The Rainbow", "Talk Talk"], ["New Grass", "Talk Talk"], ["The Loom", "Bark Psychosis"], ["Absent Friend", "Bark Psychosis"], ["Washer", "Slint"], ["Cave-In", "Codeine"], ["Lullaby", "Low"], ["Katy Song", "Red House Painters"], ["Bedside Table", "Bedhead"], ["Moonbeams", "The For Carnation"], ["The Seasons Reverse", "Gastr del Sol"], ["Blues Subtitled No Sense of Wonder", "Gastr del Sol"], ["Fast Car", "Jim O'Rourke"], ["Eureka", "Jim O'Rourke"], ["Holy Fool Music", "David Grubbs"], ["Djed", "Tortoise"], ["The Biz", "The Sea and Cake"], ["Audio Boxing", "Isotope 217"], ["Mysterious Barricades", "Chicago Underground Duo"], ["Jenny Ondioline", "Stereolab"], ["Soon", "My Bloody Valentine"], ["To Here Knows When", "My Bloody Valentine"], ["Souvlaki Space Station", "Slowdive"], ["Plainsong", "Seefeel"], ["My Dreaming Hill", "Flying Saucer Attack"], ["Fear of Flying", "Bowery Electric"], ["Drawing of Sound", "Windy & Carl"], ["El Lago", "Labradford"], ["Caecilia", "Fennesz"], ["Chimeras", "Tim Hecker"], ["Angel", "Massive Attack"], ["Group Four", "Massive Attack"], ["Roads", "Portishead"], ["Floating on a Moment", "Beth Gibbons"], ["Archangel", "Burial"], ["Building Steam with a Grain of Salt", "DJ Shadow"], ["Roygbiv", "Boards of Canada"], ["Cichli", "Autechre"], ["Xtal", "Aphex Twin"], ["Do Dekor", "Jan Jelinek"], ["Atlas", "Battles"], ["Fire Back About Your New Baby's Sex", "Don Caballero"], ["Starfire", "Jaga Jazzist"], ["Actionist Respoke", "Mouse on Mars"], ["Beep Street", "Squarepusher"], ["She Moves She", "Four Tet"], ["Silhouettes (I, II & III)", "Floating Points"], ["Odessa", "Caribou"], ["Music for 18 Musicians", "Steve Reich"], ["In C", "Terry Riley"], ["How to Disappear Completely", "Radiohead"], ["Pyramid Song", "Radiohead"], ["Tinseltown in the Rain", "The Blue Nile"], ["I Believe in You", "Talk Talk"], ["A Little Lost", "Arthur Russell"], ["Orpheus", "David Sylvian"], ["The Colour of Spring", "Mark Hollis"], ["Farmer in the City", "Scott Walker"], ["Be Not So Fearful", "Bill Fay"], ["The Kiss", "Judee Sill"], ["LONG SEASON", "Fishmans"], ["Weather Report", "Fishmans"], ["Lust", "Rei Harakami"], ["Star Fruits Surf Rider", "Cornelius"], ["Since I Left You", "The Avalanches"], ["Come On Let’s Go", "Broadcast"], ["Dsco", "Sweet Trip"], ["100", "Dean Blunt"], ["Devotion", "Tirzah"], ["Kerosene!", "Yves Tumor"], ["I Want You to Suffer", "Cindy Lee"], ["Feel You", "Julia Holter"], ["Billions", "Caroline Polachek"], ["cellophane", "FKA twigs"], ["Retrograde", "James Blake"], ["Made to Stray", "Mount Kimbie"], ["Space Is Only Noise If You Can See", "Nicolas Jaar"], ["Desafío", "Arca"], ["Chrome Country", "Oneohtrix Point Never"], ["Lucid", "Kelly Lee Owens"], ["Journey in Satchidananda", "Alice Coltrane"], ["Love Is Everywhere", "Pharoah Sanders"], ["Black Classical Music", "Yussef Dayes"], ["Abusey Junction", "Kokoroko"], ["Time Moves Slow", "BADBADNOTGOOD"], ["Summon the Fire", "The Comet Is Coming"], ["Space 8", "Nala Sinephro"], ["Movement 6", "Floating Points, Pharoah Sanders & The London Symphony Orchestra"], ["Peace Piece", "Bill Evans"], ["The Windup", "Keith Jarrett"], ["Svefn-g-englar", "Sigur Rós"], ["Storm", "Godspeed You! Black Emperor"], ["Mogwai Fear Satan", "Mogwai"], ["Requiem for Dying Mothers, Pt. 2", "Stars of the Lid"], ["An Ending (Ascent)", "Brian Eno"], ["The Pearl", "Harold Budd & Brian Eno"], ["Andata", "Ryuichi Sakamoto"], ["Flight from the City", "Jóhann Jóhannsson"], ["Spiegel im Spiegel", "Arvo Pärt"], ["Jóga", "Björk"]];
+const DEFAULT_TRACKS = [["The Rainbow", "Talk Talk"], ["New Grass", "Talk Talk"], ["The Loom", "Bark Psychosis"], ["Hex", "Bark Psychosis"], ["Washer", "Slint"], ["Cave-In", "Codeine"], ["Lullaby", "Low"], ["Katy Song", "Red House Painters"], ["Bedside Table", "Bedhead"], ["Moonbeams", "The For Carnation"], ["The Seasons Reverse", "Gastr del Sol"], ["Blues Subtitled No Sense of Wonder", "Gastr del Sol"], ["Ghost Ship in a Storm", "Jim O'Rourke"], ["Women of the World", "Jim O'Rourke"], ["Holy Fool Music", "David Grubbs"], ["Djed", "Tortoise"], ["The Biz", "The Sea and Cake"], ["Audio Champion", "Isotope 217"], ["Hyperglyph", "Chicago Underground Duo"], ["Jenny Ondioline", "Stereolab"], ["Soon", "My Bloody Valentine"], ["To Here Knows When", "My Bloody Valentine"], ["Souvlaki Space Station", "Slowdive"], ["Plainsong", "Seefeel"], ["My Dreaming Hill", "Flying Saucer Attack"], ["Fear of Flying", "Bowery Electric"], ["The Sun", "Windy & Carl"], ["El Lago", "Labradford"], ["Caecilia", "Fennesz"], ["Chimeras", "Tim Hecker"], ["Angel", "Massive Attack"], ["Group Four", "Massive Attack"], ["Roads", "Portishead"], ["Floating on a Moment", "Beth Gibbons"], ["Archangel", "Burial"], ["Building Steam with a Grain of Salt", "DJ Shadow"], ["Roygbiv", "Boards of Canada"], ["Cichli", "Autechre"], ["Xtal", "Aphex Twin"], ["Do Dekor", "Jan Jelinek"], ["Atlas", "Battles"], ["Fire Back About Your New Baby's Sex", "Don Caballero"], ["Starfire", "Jaga Jazzist"], ["Actionist Respoke", "Mouse on Mars"], ["Beep Street", "Squarepusher"], ["She Moves She", "Four Tet"], ["Silhouettes (I, II & III)", "Floating Points"], ["Odessa", "Caribou"], ["Music for 18 Musicians", "Steve Reich"], ["In C", "Terry Riley"], ["How to Disappear Completely", "Radiohead"], ["Pyramid Song", "Radiohead"], ["Tinseltown in the Rain", "The Blue Nile"], ["I Believe in You", "Talk Talk"], ["A Little Lost", "Arthur Russell"], ["Orpheus", "David Sylvian"], ["The Colour of Spring", "Mark Hollis"], ["Farmer in the City", "Scott Walker"], ["Be Not So Fearful", "Bill Fay"], ["The Kiss", "Judee Sill"], ["LONG SEASON", "Fishmans"], ["Weather Report", "Fishmans"], ["Lust", "Rei Harakami"], ["Star Fruits Surf Rider", "Cornelius"], ["Since I Left You", "The Avalanches"], ["Come On Let’s Go", "Broadcast"], ["Dsco", "Sweet Trip"], ["100", "Dean Blunt"], ["Devotion", "Tirzah"], ["Kerosene!", "Yves Tumor"], ["Kingdom Come", "Cindy Lee"], ["Feel You", "Julia Holter"], ["Billions", "Caroline Polachek"], ["cellophane", "FKA twigs"], ["Retrograde", "James Blake"], ["Made to Stray", "Mount Kimbie"], ["Space Is Only Noise If You Can See", "Nicolas Jaar"], ["Desafío", "Arca"], ["Chrome Country", "Oneohtrix Point Never"], ["Lucid", "Kelly Lee Owens"], ["Journey in Satchidananda", "Alice Coltrane"], ["Love Is Everywhere", "Pharoah Sanders"], ["Black Classical Music", "Yussef Dayes"], ["Abusey Junction", "Kokoroko"], ["Time Moves Slow", "BADBADNOTGOOD"], ["Summon the Fire", "The Comet Is Coming"], ["Space 8", "Nala Sinephro"], ["Birth4000", "Floating Points"], ["Peace Piece", "Bill Evans"], ["The Windup", "Keith Jarrett"], ["Svefn-g-englar", "Sigur Rós"], ["Mladic", "Godspeed You! Black Emperor"], ["Mogwai Fear Satan", "Mogwai"], ["Requiem for Dying Mothers, Pt. 2", "Stars of the Lid"], ["An Ending (Ascent)", "Brian Eno"], ["The Pearl", "Harold Budd & Brian Eno"], ["Andata", "Ryuichi Sakamoto"], ["Flight from the City", "Jóhann Jóhannsson"], ["Spiegel im Spiegel", "Arvo Pärt"], ["Jóga", "Björk"]];
 
 const API = 'https://api.spotify.com/v1';
 const AUTH = 'https://accounts.spotify.com/authorize';
 const TOKEN = 'https://accounts.spotify.com/api/token';
 const SCOPES = 'playlist-modify-private playlist-modify-public user-read-private';
 const redirectUri = location.origin + location.pathname;
-const CACHE_KEY = 'ivy_track_cache_v3';
+const CACHE_KEY = 'ivy_track_cache_v4';
 
 const ARTIST_ALIASES = {
-  'my bloody valentine':['マイブラッディヴァレンタイン'], 'battles':['バトルス'],
+  'mybloodyvalentine':['マイブラッディヴァレンタイン'], 'battles':['バトルス'],
   'squarepusher':['スクエアプッシャー'], 'radiohead':['レディオヘッド'],
-  'david sylvian':['デヴィッドシルヴィアン'], 'fishmans':['フィッシュマンズ'],
-  'fka twigs':['fkaツイッグス'], 'james blake':['ジェイムスブレイク'],
-  'oneohtrix point never':['ワンオートリックスポイントネヴァー'],
-  'bill evans':['ビルエヴァンス','ビルエヴァンストリオ'],
-  'keith jarrett':['キースジャレット'], 'sigur ros':['シガーロス'],
-  'mogwai':['モグワイ'], 'brian eno':['ブライアンイーノ'],
-  'arvo part':['アルヴォペルト'], 'bjork':['ビョーク'],
-  'number girl':['ナンバーガール'], 'arca':['アルカ'],
-  'ryuichi sakamoto':['坂本龍一']
+  'davidsylvian':['デヴィッドシルヴィアン'], 'fishmans':['フィッシュマンズ'],
+  'fkatwigs':['fkaツイッグス'], 'jamesblake':['ジェイムスブレイク'],
+  'oneohtrixpointnever':['ワンオートリックスポイントネヴァー'],
+  'billevans':['ビルエヴァンス','ビルエヴァンストリオ'],
+  'keithjarrett':['キースジャレット'], 'sigurros':['シガーロス'],
+  'mogwai':['モグワイ'], 'brianeno':['ブライアンイーノ'],
+  'arvopart':['アルヴォペルト'], 'bjork':['ビョーク'],
+  'arca':['アルカ'], 'ryuichisakamoto':['坂本龍一'],
+  'theavalanches':['アヴァランチーズ'], 'stevereich':['スティーヴライヒ'],
+  'terryriley':['テリーライリー'], 'fennessez':['フェネス'],
+  'talktalk':['トークトーク'], 'massiveattack':['マッシヴアタック']
 };
 
 let accessToken = sessionStorage.getItem('ivy_access_token') || '';
@@ -51,16 +53,21 @@ function aliasForms(name){
   return [...new Set(list.map(normalize).filter(Boolean))];
 }
 function artistScore(targetArtist,itemArtists){
-  const targets=artistParts(targetArtist).flatMap(aliasForms);
+  const targetGroups=artistParts(targetArtist).map(aliasForms);
   const candidates=itemArtists.flatMap(a=>aliasForms(a.name));
-  let best=0;
-  for(const t of targets)for(const c of candidates){
-    let s=dice(t,c);
-    if(t===c)s=1;
-    else if(t.length>=4 && (c.startsWith(t)||t.startsWith(c)))s=Math.max(s,.9);
-    best=Math.max(best,s);
-  }
-  return best;
+  if(!targetGroups.length||!candidates.length)return 0;
+  const perTarget=targetGroups.map(forms=>{
+    let best=0;
+    for(const t of forms)for(const c of candidates){
+      let v=dice(t,c);
+      if(t===c)v=1;
+      else if(t.length>=5 && c.length>=5 && (c.startsWith(t)||t.startsWith(c)))v=Math.max(v,.88);
+      best=Math.max(best,v);
+    }
+    return best;
+  });
+  // 複数名義は全員一致を必須にしすぎず、主名義の一致を強く評価する
+  return perTarget.length===1?perTarget[0]:(.7*perTarget[0]+.3*Math.max(...perTarget.slice(1)));
 }
 function score(target,item){
   const title=dice(target.title,item.name);
@@ -70,9 +77,11 @@ function score(target,item){
   if(!wanted.includes('live')&&found.includes('live'))penalty+=.18;
   if(!wanted.includes('demo')&&found.includes('demo'))penalty+=.14;
   if(!wanted.includes('remaster')&&found.includes('remaster'))penalty+=.03;
-  if(title>.96 && artist<.42)penalty+=.22; // Arca → Mary Arcane のような誤爆を抑止
+  if(artist<.58)penalty+=.38; // 曲名だけ同じ別人を自動選択させない
+  else if(artist<.72)penalty+=.18;
+  if(title>.96 && artist<.72)penalty+=.18;
   if(title<.55)penalty+=.15;
-  return Math.max(0,.68*title+.32*artist-penalty);
+  return Math.max(0,.62*title+.38*artist-penalty);
 }
 function cacheKey(t){return `${normalize(t.artist)}|${normalize(t.title)}`}
 function compact(item){return {id:item.id,uri:item.uri,name:item.name,artists:item.artists,external_urls:item.external_urls||{},_score:item._score||1}}
@@ -124,11 +133,11 @@ function render(){
   $('#createBtn').disabled=!selected;
   $('#results').innerHTML=tracks.map((t,i)=>{
     const found=t.selected?`<div class="found">${escapeHtml(t.selected.artists.map(a=>a.name).join(', '))} — ${escapeHtml(t.selected.name)} <span class="score">${Math.round((t.selected._score||1)*100)}%</span></div>`:'';
-    const choices=t.candidates.length?`<select data-index="${i}">${t.candidates.map((c,j)=>`<option value="${j}" ${t.selected?.id===c.id?'selected':''}>${escapeHtml(c.artists.map(a=>a.name).join(', '))} — ${escapeHtml(c.name)} (${Math.round(c._score*100)}%)</option>`).join('')}<option value="-1">この曲を除外</option></select>`:'';
+    const choices=t.candidates.length?`<select data-index="${i}">${!t.selected?'<option value="" selected>候補を確認して選択</option>':''}${t.candidates.map((c,j)=>`<option value="${j}" ${t.selected?.id===c.id?'selected':''}>${escapeHtml(c.artists.map(a=>a.name).join(', '))} — ${escapeHtml(c.name)} (${Math.round(c._score*100)}%)</option>`).join('')}<option value="-1">この曲を除外</option></select>`:'';
     const tools=`<details class="manual"><summary>手動で直す</summary><div class="manualgrid"><input data-query="${i}" value="${escapeHtml(t.query||`${t.artist} ${t.title}`)}" aria-label="検索語"><button class="smallbtn secondary" data-retry="${i}">この曲だけ再検索</button><input data-uri="${i}" placeholder="Spotifyの曲URLまたはspotify:track:..."><button class="smallbtn ghost" data-seturi="${i}">URLで固定</button></div></details>`;
     return `<div class="row ${t.status}"><div class="num">${t.order}</div><div><strong>${escapeHtml(t.artist)}</strong><br>${escapeHtml(t.title)}${found}${choices}${tools}</div><div class="badge">${label(t.status)}</div></div>`;
   }).join('');
-  document.querySelectorAll('select[data-index]').forEach(el=>el.addEventListener('change',()=>{const t=tracks[Number(el.dataset.index)],idx=Number(el.value);t.selected=idx>=0?t.candidates[idx]:null;t.status=t.selected?(t.selected._score>=.86?'matched':'review'):'missing';if(t.selected)saveCache(t,t.selected);render()}));
+  document.querySelectorAll('select[data-index]').forEach(el=>el.addEventListener('change',()=>{const t=tracks[Number(el.dataset.index)],raw=el.value,idx=raw===''?NaN:Number(raw);t.selected=Number.isInteger(idx)&&idx>=0?t.candidates[idx]:null;t.status=t.selected?(t.selected._score>=.88?'matched':'review'):'missing';if(t.selected)saveCache(t,t.selected);render()}));
   document.querySelectorAll('[data-retry]').forEach(b=>b.onclick=async()=>{const i=Number(b.dataset.retry);tracks[i].query=document.querySelector(`[data-query="${i}"]`).value.trim();await matchOne(i,true)});
   document.querySelectorAll('[data-seturi]').forEach(b=>b.onclick=async()=>{const i=Number(b.dataset.seturi);const value=document.querySelector(`[data-uri="${i}"]`).value.trim();await setFromUri(i,value)});
 }
@@ -160,8 +169,11 @@ async function matchOne(i,force=false){
       const cached={...cache[cacheKey(t)],_score:1};t.candidates=[cached];t.selected=cached;t.status='matched';render();return;
     }
     const candidates=await findCandidates(t,force?t.query:'');
-    t.candidates=candidates;t.selected=candidates[0]||null;
-    t.status=!t.selected?'missing':t.selected._score>=.86?'matched':'review';
+    t.candidates=candidates;
+    const best=candidates[0]||null;
+    // 低確信度を勝手に選ばない。候補として見せるだけにする。
+    t.selected=best&&best._score>=.72?best:null;
+    t.status=!best?'missing':!t.selected?'review':best._score>=.88?'matched':'review';
     if(t.selected&&t.status==='matched')saveCache(t,t.selected);
   }catch(e){t.status='missing';console.error(e);alert(e.message)}
   render();
